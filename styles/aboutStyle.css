@@ -1,0 +1,322 @@
+/* General styles */
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background: white;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    padding-left: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 20px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: "Anton SC", sans-serif;
+}
+
+.nav-links a:hover {
+    background: rgba(128, 122, 122, 0.2);
+    transform: scale(1.05);
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: red;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+    body{
+        margin: 0px;
+        padding: 0px;
+    }
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    .about-us-image{
+        width: 100%;
+    }
+    .about-us-content {
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .about-us-image,
+    #about-us-page-2 {
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+
+    .hero {
+        height: auto;
+        padding: 20px;
+    }
+
+    .banner h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 24px;
+    }
+
+    .about-us-content h3 {
+        font-size: 30px;
+    }
+
+    .about-us-content p {
+        font-size: 18px;
+    }
+
+    .about-us-content li {
+        font-size: 18px;
+    }
+
+    .about-us-content h1 {
+        font-size: 30px;
+    }
+}
+
+/* Hero section */
+.hero {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../images/about us.jpg");
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+    background-position: center;
+    color: #ffffff;
+}
+
+.banner {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.banner h1 {
+    font-size: 60px;
+}
+
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.about-us {
+    padding: 0 10%;
+    padding-bottom: 30px;
+}
+
+.about-us-image {
+    float: right;
+    width: 600px;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+}
+
+#about-us-page-2 {
+    float: left;
+    width: 400px;
+    height: auto;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.about-us-content {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+}
+
+.about-us-content h3 {
+    font-size: 43px;
+}
+
+.about-us-content h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.about-us-content p {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+}
+
+.about-us-content li {
+    list-style: circle;
+    font-size: 20px;
+}
+
+    /* Card */
+.card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px; /* Space between cards */
+        justify-content: center;
+}
+
+.card {
+    display: block;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 300px;
+        text-align: center;
+}
+    
+.card-svg {
+        background: #f9f9f9;
+        padding: 20px;
+}
+    
+.card-svg img {
+        width: 5em;
+        height: 5em;
+        color: #ff5252;
+}
+    
+.card-content {
+        padding: 20px;
+}
+    
+.card-content h2 {
+        margin: 0;
+        font-size: 24px;
+        color: #333333;
+}
+    
+.card-content p {
+        color: #777777;
+        margin: 10px 0 0;
+        font-size: 16px;
+}
+  /* Footer */
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    color: #000000;
+    padding: 20px 0;
+}
+
+.footer-about, .footer-links, .footer-contact {
+    flex: 1;
+    margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-about h2, .footer-links h2, .footer-contact h2 {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-links ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-links li, .footer-contact li {
+    margin: 10px 0;
+}
+
+.footer-links a {
+    color:#000000;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: darkgray;
+}
+
+.footer-bottom {
+    background-color: #505050;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-bottom p {
+    margin: 0;
+}   
+  
+
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
