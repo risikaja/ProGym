@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #E7E7E7;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -64,7 +66,7 @@ header {
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         margin: 0px;
         padding: 0px;
     }
@@ -105,6 +107,7 @@ header {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
     background-position: center;
     color: #ffffff;
+    width: 100%;
 }
 
 .banner {
@@ -116,46 +119,129 @@ header {
 .banner h1 {
     font-size: 2em;
 }
- /* News */
- .news{
-    /* background-color: #E7E7E7; */
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0 15% 0 15%;
- }
 
- .news h3{
-    font-size: 1.5em;
- }
+/* Contact section */
+.google-map {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
 
- .news p{
-    font-size: 1.2em;
- }
+.contact-container {
+    max-width: 960px;
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 1rem hsla(0 0 0 / 16%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
 
- iframe{
-    float: right; 
-    padding: 10px 0 10px 10px;
- }
+.form-container {
+    padding: 20px;
+    width: 100%;
+}
 
- .news-img{
-    width: 40%;
-    float: left; 
-    padding: 10px 10px 10px 0;
- }
+.form-container h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-align: center;
+}
 
- 
-@media (max-width: 768px){
-    .news{
-        text-align: center;
+.border{
+    width: 180px;
+    height: 5px;
+    background: red;
+    margin: 26px auto;
+}
+
+.contact-form {
+    display: grid;
+    row-gap: 1rem;
+    width: 97%;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 95.5%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background: #dbd9d9;
+    color: #000000;
+    margin-right: 20px;
+}
+
+.contact-form .send-button {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 0.4rem;
+    background: red;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 450;
+    color: white;
+}
+
+.contact-form .send-button:hover {
+    background: rgb(255, 81, 81);
+    transition: 0.3s all linear;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 964px) {
+    .contact-container {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+
+@media (max-width: 700px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .map iframe {
+        height: 400px;
+    }
+    .google-map {
+        padding: 20px 0;
     }
 
-    iframe{
-        width: 100%;
+    .contact-form input,
+    .contact-form textarea {
+        width: 85%;
+    }
+    .contact-form .send-button{
+        width: 90%;
     }
 }
 
 
-/* Footer */
 
+
+/* Footer */
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -208,11 +294,10 @@ header {
 
 .footer-bottom p {
     margin: 0;
-}   
-  
+}
 
-  @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .columns {
-      width: 100%;
+        width: 100%;
     }
-  }
+}
