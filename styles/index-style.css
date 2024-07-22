@@ -460,9 +460,6 @@ h5 {
 }
 
 @media (max-width: 768px) {
-    .card-wrapper {
-        justify-content: center;
-    }
     .custom-card {
         width: calc(100% - 20px); /* 1 card per row on mobile */
     }
@@ -606,8 +603,7 @@ h5 {
   
   /* Footer */
 
-  
-.footer-container {
+  .footer-container {
     display: flex;
     justify-content: space-around;
     background-color: #f1f1f1;
@@ -676,7 +672,7 @@ h5 {
     }
 
     .footer-links {
-        order: 2;
+        order: 2; 
         margin: 10px 0;
     }
 
@@ -685,6 +681,13 @@ h5 {
         margin: 10px 0;
     }
 }
+  
+
+  @media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
+  }
   
 
 
