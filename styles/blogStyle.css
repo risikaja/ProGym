@@ -247,7 +247,11 @@ h5 {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .card-wrapper{
+        align-items: center;
+        justify-content: center;
+    }
     .custom-card {
         width: calc(100% - 20px); 
     }
