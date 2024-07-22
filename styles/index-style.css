@@ -74,12 +74,14 @@ header {
     .nav-links {
         display: none;
         position: absolute;
-        top: 60px;
+        top: 70px;
         right: 0;
         background-color: white;
         width: 100%;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     
     .nav-links.active {
@@ -460,6 +462,9 @@ h5 {
 }
 
 @media (max-width: 768px) {
+    .card-wrapper {
+        justify-content: center;
+    }
     .custom-card {
         width: calc(100% - 20px); /* 1 card per row on mobile */
     }
@@ -481,6 +486,7 @@ h5 {
 
 .hero-image {
     width: 100%;
+    height: auto;
     height: 75vh; 
     position: relative;
     overflow: hidden;
