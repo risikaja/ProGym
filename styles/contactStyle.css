@@ -153,12 +153,6 @@ header {
     text-align: center;
 }
 
-.border{
-    width: 180px;
-    height: 5px;
-    background: red;
-    margin: 26px auto;
-}
 
 .contact-form {
     display: grid;
@@ -215,6 +209,9 @@ header {
         margin: 0 auto;
         width: 90%;
     }
+    .form-container h3{
+        text-align: center;
+    }
 }
 
 @media (max-width: 700px) {
@@ -236,6 +233,10 @@ header {
     .contact-form .send-button{
         width: 90%;
     }
+    .form-container h3{
+        text-align: center;
+    }
+    
 }
 
 
