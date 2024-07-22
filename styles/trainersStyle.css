@@ -166,7 +166,6 @@ h5 {
 
 .card-title-custom {
     font-family: "Patua One", serif;
-    
     font-size: 45px;
     margin: 0 0 10px 0;
     text-align: center;
@@ -177,6 +176,7 @@ h5 {
     margin-bottom: 15px;
     text-align: center;
     color: #555;
+    font-family: "Patua One", serif;
 }
 
 
@@ -211,12 +211,14 @@ h5 {
     background-color: #f1f1f1;
     color: #000000;
     padding: 20px 0;
+    flex-wrap: wrap; /* Allow items to wrap */
 }
 
 .footer-about, .footer-links, .footer-contact {
     flex: 1;
     margin: 0 20px;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 200px; /* Ensure elements don't get too small */
 }
 
 .footer-about h2, .footer-links h2, .footer-contact h2 {
@@ -238,7 +240,7 @@ h5 {
 }
 
 .footer-links a {
-    color:#000000;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -257,11 +259,27 @@ h5 {
 
 .footer-bottom p {
     margin: 0;
-}   
-  
+}
 
-  @media only screen and (max-width: 600px) {
-    .columns {
-      width: 100%;
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
-  }
+
+    .footer-about {
+        order: 1; /* Display "About ProGym" first */
+        width: 85%;
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .footer-links {
+        order: 2; /* Display "Quick Links" second */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+
+    .footer-contact {
+        order: 3; /* Display "Contact Us" last */
+        margin: 10px 0; /* Add margin for spacing */
+    }
+}
