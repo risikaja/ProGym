@@ -10,7 +10,9 @@ function calculateBMI(){
         document.getElementById("bmi-result").innerHTML = "Your BMI is " + bmi.toFixed(2) + " Your weight is Normal!";
     } else if(bmi >= 25 && bmi < 30){
         document.getElementById("bmi-result").innerHTML = "Your BMI is " + bmi.toFixed(2) + " You are Overweight!";
-    } else {
+    } else if(bmi > 30){
         document.getElementById("bmi-result").innerHTML = "Your BMI is " + bmi.toFixed(2) + " You are Obese!";
+    } else{
+        document.getElementById("bmi-result").innerHTML = "Enter the weight and height!";
     }
 }
