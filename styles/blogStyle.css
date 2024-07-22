@@ -249,11 +249,12 @@ h5 {
 
 @media (max-width: 768px) {
     .custom-card {
-        width: calc(100% - 20px); /* 1 card per row on mobile */
+        width: calc(100% - 20px); 
     }
 }
 
 /* Footer */
+
 
 .footer-container {
     display: flex;
@@ -261,12 +262,14 @@ h5 {
     background-color: #f1f1f1;
     color: #000000;
     padding: 20px 0;
+    flex-wrap: wrap; 
 }
 
 .footer-about, .footer-links, .footer-contact {
     flex: 1;
     margin: 0 20px;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 200px; 
 }
 
 .footer-about h2, .footer-links h2, .footer-contact h2 {
@@ -288,7 +291,7 @@ h5 {
 }
 
 .footer-links a {
-    color:#000000;
+    color: #000000;
     text-decoration: none;
 }
 
@@ -307,11 +310,27 @@ h5 {
 
 .footer-bottom p {
     margin: 0;
-}   
-  
+}
 
-  @media only screen and (max-width: 600px) {
-    .columns {
-      width: 100%;
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; 
+        align-items: center; 
     }
-  }
+
+    .footer-about {
+        order: 1;
+        width: 85%;
+        margin: 10px 0; 
+    }
+
+    .footer-links {
+        order: 2; 
+        margin: 10px 0; 
+    }
+
+    .footer-contact {
+        order: 3; 
+        margin: 10px 0; 
+    }
+}
