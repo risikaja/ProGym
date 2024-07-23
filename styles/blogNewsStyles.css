@@ -147,9 +147,11 @@ header {
  
 @media (max-width: 768px){
     .news{
-        text-align: center;
+        text-align: left;
     }
-
+    .news-img{
+        width: 100%;
+    }
     iframe{
         width: 100%;
     }
