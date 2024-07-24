@@ -169,7 +169,7 @@ h5 {
     font-weight: bold;
     font-size: 30px;
     padding-bottom: 0px;
-    padding-left: 35px;
+    padding-left: 20px;
     text-align: left;
 }
 
@@ -180,7 +180,7 @@ h5 {
 
 .wrapper {
     display: flex;
-    max-width: 1100px;
+    max-width: 1270px;
     width: 100%;
     position: relative;
     align-items: center;
@@ -208,7 +208,7 @@ h5 {
 .wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
+    grid-auto-columns: calc((100% / 4) - 12px);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 16px;
@@ -288,6 +288,7 @@ h5 {
     box-shadow:  rgba(0, 0, 0, 0.5);
     padding-top: 0px;
     padding-bottom: 0px;
+    width: 100%;
 }
 
 .sign-up-container {
@@ -319,7 +320,7 @@ h5 {
 
 .sign-up-content h1 {
     font-family: 'Arial', sans-serif;
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.2;
     margin-left: 20px;
 }
@@ -343,6 +344,12 @@ h5 {
 .sign-up-button:hover {
     background-color: darkred;
 }
+
+@media (max-width: 768px) {
+    .sign-up-container {
+      flex-direction: column-reverse; /* Image above content */
+    }
+  }
 
 /* Testimonials */
 .testimonials{
@@ -401,6 +408,82 @@ h5 {
 }
 
 /* Trainers */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.custom-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    width: 300px; 
+    transition: transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img-custom {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-content-custom {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title-custom {
+    font-family: "Patua One", serif;
+    
+    font-size: 45px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.card-description-custom {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #555;
+}
+
+
+
+@media (max-width: 1024px) {
+    .card-wrapper {
+        justify-content: flex-start; 
+    }
+    
+    .custom-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-wrapper {
+        justify-content: center;
+    }
+    .custom-card {
+        width: calc(100% - 20px); /* 1 card per row on mobile */
+    }
+}
+
+
+
+
 
 
 .card-wrapper {
@@ -736,6 +819,24 @@ h5 {
 
     
 
+}
+
+@media screen and (max-width: 900px){
+    .sign-up-container {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .sign-up-content h1 {
+        font-size: 36px;
+        margin-left: 0;
+        
+    }
+
+    .sign-up-button {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 @media (max-width: 768px) {

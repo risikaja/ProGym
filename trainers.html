@@ -22,7 +22,9 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
         <!--Font awesome-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    </head>
 <body>
     <!-- Navigation bar -->
 <section id="navbar" class="navbar">
@@ -56,104 +58,42 @@
 
 <!--Expert trainers-->
 <h5>EXPERT TRAINERS</h5>
-<section class="card-wrapper">
-    <!-- First Card -->
-    <div class="custom-card">
-        <img src=".\images\first trainer.png" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                Selina Stuart
-            </h2>
-            <p class="card-description-custom">
-                Fitness Trainer
-            </p>
-        </div>
-    </div>
-    <!-- Second Card -->
-    <div class="custom-card">
-        <img src="images\second trainer.png" alt="Card image" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                David Smith
-            </h2>
-            <p class="card-description-custom">
-                Martial Art Trainer
-            </p>
-        </div>
-    </div>
-    <!-- Third Card -->
-    <div class="custom-card">
-        <img src="images\third trainer.jpg" alt="Card image" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                John Doe
-            </h2>
-            <p class="card-description-custom">
-                Boxing Trainer
-            </p>
-        </div>
-    </div>
-     <!-- Fourth Card -->
-     <div class="custom-card">
-        <img src=".\images/fourth trainer.jpg" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                Ellie Watson
-            </h2>
-            <p class="card-description-custom">
-                Fitness Trainer
-            </p>
-        </div>
-    </div>
-    <!-- Fifth Card -->
-    <div class="custom-card">
-        <img src="images/fourth trainer.jpg" alt="Card image" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                Jenifer Alex
-            </h2>
-            <p class="card-description-custom">
-                Martial Art Trainer
-            </p>
-        </div>
-    </div>
-    <!-- Sixth Card -->
-    <div class="custom-card">
-        <img src="images/sixth trainer.jpg" alt="Card image" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                Bob Alan
-            </h2>
-            <p class="card-description-custom">
-                Boxing Trainer
-            </p>
-        </div>
-    </div>
-     <!-- Seventh Card -->
-     <div class="custom-card">
-        <img src=".\images/seventh trainer.jpg" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                Jecy Deoko
-            </h2>
-            <p class="card-description-custom">
-                Fitness Trainer
-            </p>
-        </div>
-    </div>
-    <!-- Eighth Card -->
-    <div class="custom-card">
-        <img src="images/Eighth trainer.jpg" alt="Card image" class="card-img-custom">
-        <div class="card-content-custom">
-            <h2 class="card-title-custom">
-                David Fahim
-            </h2>
-            <p class="card-description-custom">
-                Martial Art Trainer
-            </p>
-        </div>
-    </div>  
-</section> 
+<div class="wrapper">
+    <i id="left" class="fa-solid fa-angle-left"></i>
+    <ul class="carousel">
+      <li class="card">
+        <div class="img"><img src="./images/first trainer.png" alt="img" draggable="false"></div>
+        <h2>Selina Stuart</h2>
+        <span>Fitness Trainer</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="./images/second trainer.png" alt="img" draggable="false"></div>
+        <h2>David Smith</h2>
+        <span>Martial Art Trainer</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="./images/third trainer.jpg" alt="img" draggable="false"></div>
+        <h2>David Fahim</h2>
+        <span>Martial Art Trainer</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="./images/fourth trainer.jpg" alt="img" draggable="false"></div>
+        <h2>Ellie Watson</h2>
+        <span>Fitness Trainer</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="./images/fifth trainer.jpg" alt="img" draggable="false"></div>
+        <h2>Jenifer Alex</h2>
+        <span>Martial art</span>
+      </li>
+      <li class="card">
+        <div class="img"><img src="./images/sixth trainer.jpg" alt="img" draggable="false"></div>
+        <h2>Donald Horton</h2>
+        <span>Fitness trainer</span>
+      </li>
+    </ul>
+    <i id="right" class="fa-solid fa-angle-right"></i>
+  </div>
 
 
 <!-- Footer -->
@@ -189,5 +129,7 @@
 
 <!-- Hamburger menu script -->
 <script src="./script/hamburg.js"></script>
+<!--Carousel-->
+<script src="./script/trainer carousel.js"></script>
 </body>
 </html>
