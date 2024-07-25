@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.carousel-button.next');
 
     let currentIndex = 0;
-    const cardWidth = 300; // Adjust this value if your cards have a different width
-    const cardMargin = 20; // Adjust this value if your cards have a different margin
+    const cardWidth = 300; 
+    const cardMargin = 20; 
     const totalCards = document.querySelectorAll('.custom-card').length;
 
     function updateCarousel() {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     nextButton.addEventListener('click', () => {
-        if (currentIndex < totalCards - 3) { // Show 3 cards at a time
+        if (currentIndex < totalCards - 3) { 
             currentIndex++;
             updateCarousel();
         }

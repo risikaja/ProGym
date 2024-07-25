@@ -17,7 +17,7 @@ header {
 
 .logo img {
     height: 60px;
-    padding-left: 20px;
+    padding-left: 27px;
 }
 
 .nav-links {
@@ -63,9 +63,9 @@ header {
 }
 
 @media (max-width: 768px) {
-    body{
-        margin: 0px;
-        padding: 0px;
+    body {
+        margin: 0;
+        padding: 0;
     }
     .nav-links {
         display: none;
@@ -79,19 +79,20 @@ header {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .nav-links.active {
         display: flex;
     }
-    
+
     .nav-links li {
         margin: 10px 0;
     }
-    
+
     .hamburger {
         display: flex;
     }
 }
+
 /* Hero section */
 .hero {
     height: 70vh;
@@ -111,7 +112,6 @@ header {
     font-family: "Lato", sans-serif;
     font-weight: 900;
     font-size: 24px;
-    
 }
 
 .banner h1 {
@@ -122,14 +122,14 @@ header {
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Space between cards */
+    gap: 20px; 
     justify-content: center;
-    padding: 30px 0 30px 0;
+    padding: 30px 0;
 }
 
 .card {
     display: block;
-    background: #ffffff;
+    position: relative; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -140,12 +140,47 @@ header {
 
 .card-svg {
     background: #f9f9f9;
-    /* padding: 20px; */
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; 
+}
+
+.card:hover .image {
+    opacity: 0.3;
+}
+
+.card:hover .middle {
+    opacity: 1;
+}
+.text h2{
+    color: red;
+}
+.text {
+    font-family: "Roboto", sans-serif;
+    color: black;
+    font-size: 16px;
 }
 
 .card-svg img {
     width: 100%;
-    /* height: 5em; */
     color: #ff5252;
 }
 
@@ -161,21 +196,20 @@ header {
     color: red;
 }
 
-.card-content h3{
+.card-content h3 {
     text-align: left;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.card-button{
+.card-button {
     background-color: red;
     border: none;
     border-radius: 25px;
-    color: #f1f1f1;
+    color: black;
     padding: 16px 2px;
     text-decoration: none;
-    /* margin: 4px 2px; */
     cursor: pointer;
     width: 50%;
 }
@@ -186,16 +220,13 @@ header {
     text-decoration: none;
 }
 
-
-@media (max-width: 768px){
-    .card{
+@media (max-width: 768px) {
+    .card {
         width: 85%;
     }
 }
 
 /* Footer */
-
-
 .footer-container {
     display: flex;
     justify-content: space-around;
@@ -214,7 +245,6 @@ header {
 }
 
 .footer-about h2, .footer-links h2, .footer-contact h2 {
-    /* border-bottom: 2px solid #000000; */
     padding-bottom: 10px;
     margin-bottom: 10px;
     text-align: left;
