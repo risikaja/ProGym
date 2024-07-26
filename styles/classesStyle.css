@@ -176,7 +176,7 @@ header {
 .text {
     font-family: "Roboto", sans-serif;
     color: black;
-    font-size: 16px;
+    font-size: 1em;
 }
 
 .card-svg img {
@@ -224,6 +224,13 @@ header {
     .card {
         width: 85%;
     }
+    .text{
+        font-size: 0.7em;
+    }
+    .card-button{
+        font-size: 0.9em;
+    }
+
 }
 
 /* Footer */
